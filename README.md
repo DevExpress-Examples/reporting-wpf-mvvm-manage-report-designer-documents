@@ -7,7 +7,7 @@
 
 This example demonstrates how to use the MVVM framework to create custom commands that have access to the [ReportDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) API. The user can click a button with a linked command to create or open a report, and switch tabs or document views.
 
-![Screenshot](images/screenshot.png)
+![Screenshot](Images/screenshot.png)
 
  The project defines the `IReportDesignerAPIService` interface. The code contains the `ReportDesignerAPIService` class that implements this interface and calls the [ReportDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) API methods. The `ReportDesignerAPIService` class is specified as a custom MVVM Framework [Behaviour](https://docs.devexpress.com/WPF/17442/mvvm-framework/behaviors) element to get access to the [RepotDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) object in the window.
 
