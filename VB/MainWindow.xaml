@@ -1,0 +1,42 @@
+﻿<dx:ThemedWindow x:Class="ManipulateReportDesignerDocuments_MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManipulateReportDesignerDocuments_MVVM"
+        xmlns:dxrud="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesigner" 
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        mc:Ignorable="d" WindowKind="Tabbed" WindowState="Maximized"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <DockPanel LastChildFill="True">
+        <StackPanel Margin="12">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="0,0,0,6" />
+                    <Setter Property="Padding" Value="4,2" />
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="New Report" Command="{Binding NewReportCommand}" />
+            <Button Content="Open Report" Command="{Binding OpenReportCommand}" />
+            <Button Content="Open Report from Stream" Command="{Binding OpenReportFromStreamCommand}" />
+            <Button Content="Close Active Document" Command="{Binding CloseActiveDocumentCommand}" />
+            <Button Content="Activate First Document Tab" Command="{Binding ActivateFirstDocumentTabCommand}" />
+            <Button Content="Switch Active Document View" Command="{Binding SwitchActiveDocumentViewCommand}" />
+        </StackPanel>
+        
+        <dxrud:ReportDesigner>
+            <dxrud:ReportDesignerBrowserView CloseWindowWhenLastTabIsClosed="False" />
+            <dxrud:ReportDesigner.DocumentSource>
+                <Binding Path="DefaultReport" />
+            </dxrud:ReportDesigner.DocumentSource>
+            <dxmvvm:Interaction.Behaviors>
+                <local:ReportDesignerAPIService />
+            </dxmvvm:Interaction.Behaviors>
+        </dxrud:ReportDesigner>
+        
+    </DockPanel>
+</dx:ThemedWindow>
