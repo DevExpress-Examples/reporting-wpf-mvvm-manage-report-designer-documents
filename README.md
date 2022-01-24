@@ -1,6 +1,6 @@
 # How to Use MVVM Framework to Create Commands that Manage Documents in the Report Designer
 
-This example demonstrates how to use the MVVM framework to create custom commands that have access to the [ReportDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) API. The user can click a button with a linked command to create or open a report, and switch tabs or document views.
+This example demonstrates how to use the [MVVM framework](https://www.devexpress.com/products/net/controls/wpf/mvvm-wpf.xml) to create custom commands that have access to the [ReportDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) API. The user can click a button with a linked command to create or open a report, and switch tabs or document views.
 
 ![Screenshot](Images/screenshot.png)
 
