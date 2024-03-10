@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1036930)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# How to Use MVVM Framework to Create Commands that Manage Documents in the Report Designer
+# Reporting for WPF - How to Use MVVM Framework to Create Commands that Manage Documents in the Report Designer
 
 This example demonstrates how to use the MVVM framework to create custom commands that have access to the [ReportDesigner](https://docs.devexpress.com/WPF/DevExpress.Xpf.Reports.UserDesigner.ReportDesigner) API. The user can click a button with a linked command to create or open a report, and switch tabs or document views.
 
@@ -15,7 +15,7 @@ The `MainViewModel` gets the **IReportDesignerAPIService** service from the serv
 
 
 <!-- default file list -->
-## Files to Look At
+## Files to Review
 
 - [MainWindow.xaml](./CS/MainWindow.xaml) ([MainWindow.xaml](./VB/MainWindow.xaml))
 - [MainViewModel.cs](./CS/MainViewModel.cs) ([MainViewModel.vb](./VB/MainViewModel.vb))
